@@ -12,6 +12,7 @@ body {
   background-color: var(--cream);
   display: grid;
   align-items: center;
+  vertical-align: middle;
 }
 main {
   background-color: var(--white);
