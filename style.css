@@ -11,48 +11,42 @@
 body {
   background-color: var(--cream);
   display: grid;
-  vertical-align: middle;
   align-items: center;
 }
-#card {
+main {
   background-color: var(--white);
   border-radius: 10px;
   overflow: hidden;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  width:auto;
+  width: auto;
   max-width: 600px;
 }
-@media only screen and (max-width: 680px) {
-  #card {
-    width: 375px;
-  }
-}
-#card #image {
+
+main picture {
   flex: auto;
   width: 300px;
 }
-#card #text {
-  flex:auto;
+article {
+  flex: auto;
   width: 300px;
   padding: 32px;
 }
-#card #price  {
+article .price {
   display: flex;
-
   vertical-align: middle;
-  margin-bottom:29px;
+  margin-bottom: 29px;
 }
-button  {
+button {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 14px;
   background-color: var(--dark-cyan);
   color: var(--white);
-  border:0;
+  border: 0;
   display: block;
-  width:100%;
+  width: 100%;
   padding: 14px 0 13px;
   border-radius: 8px;
 }
@@ -60,12 +54,11 @@ button:active {
   background-color: hsl(158, 37%, 17%);
 }
 
-button img{
-  display:inline-block;
+button img {
+  display: inline-block;
   margin-left: 1px;
-  margin-bottom:-3px;
-  margin-right:7px;
-  
+  margin-bottom: -3px;
+  margin-right: 7px;
 }
 h1 {
   color: var(--dark-grayish-blue);
@@ -93,19 +86,46 @@ p {
   margin-bottom: 29px;
   letter-spacing: 0.1px;
 }
-.new-price  {
+.new-price {
   color: var(--dark-cyan);
   font-size: 32px;
   font-weight: 700;
   font-family: "Fraunces";
   line-height: 32px;
 }
-.old-price  {
+.old-price {
   color: var(--dark-grayish-blue);
   font-weight: 500;
-  margin-left:20px;
-  margin-top:7px;
+  margin-left: 20px;
+  margin-top: 7px;
   font-size: 12px;
   text-decoration: line-through;
   font-family: "Montserrat";
+}
+
+@media only screen and (max-width: 679px) {
+  main {
+    width: 340px;
+  }
+  main article {
+    flex: auto;
+    padding: 25px;
+    padding-right: 20px;
+  }
+  main .price {
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.attribution {
+  font-family: "Montserrat";
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
